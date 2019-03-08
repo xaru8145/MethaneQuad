@@ -1,4 +1,4 @@
-The #####src folder contains the packages of the workspace:
+The _src_ folder contains the packages of the workspace:
 ### ROSflight
 This package provides a ROS interface to an autopilot running the ROSflight firmware
   
