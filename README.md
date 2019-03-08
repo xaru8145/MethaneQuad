@@ -8,8 +8,6 @@ In order to implement waypoint following through **mocap system**, the following
 ```bash
 $ roslaunch rosflight auto_sys_startup.launch
 ```
- _Note_: It is necessary to edit the auto_sys_startup.launch file and **uncomment** the mocap that you will be using.
-
 - Roscopter controller: 
 ```bash
 $ rosrun roscopter controller
@@ -23,3 +21,9 @@ $ rosrun roscopter controller
   ```bash
   $ rosrun roscopter waypoint_manager
   ```
+Necessary edits:
+- _auto_sys_startup.launch_ file: **uncomment** the mocap that you will be using and **change the username** in the path of the vrpn_client_ros launch files.
+- _param_startup.launch_ file: **change the username** in the path of the working_params parameter file.
+- _vrpn2odom.cpp_ file: 
+- _param_startup.launch_ file: **change the hostname**
+- _hosts_ file: **update** hostname and associated IP address
