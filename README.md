@@ -8,7 +8,7 @@ In order to implement waypoint following through **mocap system**, the following
 ```bash
 $ roslaunch rosflight auto_sys_startup.launch
 ```
- _Note_: It is necessary to edit the auto_sys_startup.launch file and ___uncomment___ the mocap that you will be using.
+ _Note_: It is necessary to edit the auto_sys_startup.launch file and **uncomment** the mocap that you will be using.
 
 - Roscopter controller: 
 ```bash
