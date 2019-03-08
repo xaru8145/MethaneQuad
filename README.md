@@ -26,4 +26,4 @@ Necessary edits:
 - _param_startup.launch_ file: **change the username** in the path of the working_params parameter file.
 - _vrpn2odom.cpp_ file: 
 - _param_startup.launch_ file: **change the hostname**
-- _hosts_ file: **update** hostname and associated IP address
+- _hosts_ file: **update** hostname and associated IP address (in /etc folder outside catkin_ws)
