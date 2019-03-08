@@ -14,10 +14,10 @@ $ rosrun roscopter controller
 ```
 - Initialize a waypoint managing file .py in ~roscopter/roscopter/src/waypoint_manager:
   + Easiest waypoint commanding file to test autonomous flight
-```bash
-$ rosrun roscopter simple_pub_command
-```
+  ```bash
+  $ rosrun roscopter simple_pub_command
+  ```
   + More complex waypoint commanding #goal
-```bash
-$ rosrun roscopter waypoint_manager
-```
+  ```bash
+  $ rosrun roscopter waypoint_manager
+  ```
