@@ -3,16 +3,18 @@
 
 This repo allows the quad to do waypoint following both through a motion caption system (VICON or OPTITRACK) and GPS (under developement. It uses customized **ROSFlight** and **ROSCopter** to provide an autopilot interface and waypoint following capabilities.
 
-Waypoint following through mocap system. Run the following command lines:
-- Initialize rosflight, vrpn_ros_client, vrpn2odom, working_params, load_params: 
+In order to implement waypoint following through **mocap system**, the following commands should be initialized:
+- Launch files that runs rosflight, vrpn_ros_client, vrpn2odom and loads parameters working_params & load_params: 
 ```bash
 $ roslaunch rosflight auto_sys_startup.launch
 ```
-- Initialize roscopter controller: 
+_Note_: It is necessary to edit the auto_sys_startup.launch file and uncomment the mocap that you will be using.
+
+- Roscopter controller: 
 ```bash
 $ rosrun roscopter controller
 ```
-- Initialize a waypoint managing file .py in ~roscopter/roscopter/src/waypoint_manager:
+- Waypoint managing file .py in ~roscopter/roscopter/src/waypoint_manager:
   + Easiest waypoint commanding file to test autonomous flight
   ```bash
   $ rosrun roscopter simple_pub_command
