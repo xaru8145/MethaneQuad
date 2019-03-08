@@ -1,0 +1,8 @@
+prefix=/home/xaru8145/catkin_ws/install
+
+Name: roscopter_utils
+Description: Description of roscopter_utils
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/xaru8145/catkin_ws/install/lib 
+Requires: 
