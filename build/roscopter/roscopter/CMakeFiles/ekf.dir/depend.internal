@@ -3,6 +3,9 @@
 
 roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf.cpp.o
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/include/ekf/ekf.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/quat.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/support.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/xform.h
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/src/ekf/ekf.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
@@ -209,6 +212,9 @@ roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf.cpp.o
  /usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/StemFunction.h
 roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_dyn.cpp.o
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/include/ekf/ekf.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/quat.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/support.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/xform.h
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/src/ekf/ekf_dyn.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
@@ -415,6 +421,9 @@ roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_dyn.cpp.o
  /usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/StemFunction.h
 roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_helper.cpp.o
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/include/ekf/ekf.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/quat.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/support.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/xform.h
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/src/ekf/ekf_helper.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
@@ -621,6 +630,9 @@ roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_helper.cpp.o
  /usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/StemFunction.h
 roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_log.cpp.o
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/include/ekf/ekf.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/quat.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/support.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/xform.h
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/src/ekf/ekf_log.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
@@ -827,6 +839,9 @@ roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_log.cpp.o
  /usr/include/eigen3/unsupported/Eigen/src/MatrixFunctions/StemFunction.h
 roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_meas.cpp.o
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/include/ekf/ekf.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/quat.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/support.h
+ /home/xaru8145/catkin_ws/src/roscopter/roscopter/lib/geometry/include/geometry/xform.h
  /home/xaru8145/catkin_ws/src/roscopter/roscopter/src/ekf/ekf_meas.cpp
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
