@@ -27,3 +27,7 @@ Necessary edits:
 - _vrpn2odom.cpp_ file: **change the hostname**
 - _param_startup.launch_ file: **change the username**
 - _hosts_ file: **update** hostname and associated IP address (in /etc folder outside catkin_ws)
+- _Source the environmen_
+```bash
+$ source /opt/ros/melodic/setup.bash
+```
