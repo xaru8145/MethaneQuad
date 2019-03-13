@@ -13,6 +13,7 @@
 #include <geometry_msgs/TwistStamped.h>
 #include <math.h>
 #include <nav_msgs/Odometry.h>
+#include <tf/tf.h>
 
 // Vicon Pose Callback
 geometry_msgs::PoseStamped vicon_pose;
@@ -33,15 +34,15 @@ int main(int argc, char **argv)
 
     // Subscribers
     ros::Subscriber vicon_pose_sub = nh.subscribe<geometry_msgs::PoseStamped>
-            ("/vrpn_client_node/marble_nuc4/pose", 10, vicon_pose_cb);
+            ("/vrpn_client_node/methane_quad2/pose", 10, vicon_pose_cb);
     ros::Subscriber vicon_vel_sub = nh.subscribe<geometry_msgs::TwistStamped>
-            ("/vrpn_client_node/marble_nuc4/twist", 10, vicon_vel_cb);
+            ("/vrpn_client_node/methane_quad2/twist", 10, vicon_vel_cb);
 
     // Publishers
     ros::Publisher odom_pub = nh.advertise<nav_msgs::Odometry>
             ("odom", 10);
-    
-    
+
+
     //the setpoint publishing rate MUST be faster than 2Hz
     ros::Rate rate(50.0);
 
@@ -62,14 +63,23 @@ int main(int argc, char **argv)
 	odom_msgs.pose.pose.orientation.y = vicon_pose.pose.orientation.y;
 	odom_msgs.pose.pose.orientation.z = vicon_pose.pose.orientation.z;
 	odom_msgs.pose.pose.orientation.w = vicon_pose.pose.orientation.w;
-	
-	odom_msgs.twist.twist.linear.x = vicon_vel.twist.linear.x;
-	odom_msgs.twist.twist.linear.y = -vicon_vel.twist.linear.y;
+
+        // Convert Quaternion to RPY
+        double roll;
+	double pitch;
+        double yaw;
+        tf::Quaternion tf_quat;
+        tf::quaternionMsgToTF(vicon_pose.pose.orientation, tf_quat);
+        tf::Matrix3x3(tf_quat).getRPY(roll, pitch, yaw);
+	yaw = -yaw;
+
+        odom_msgs.twist.twist.linear.x = cos(yaw) * vicon_vel.twist.linear.x - sin(yaw) * vicon_vel.twist.linear.y;
+	odom_msgs.twist.twist.linear.y = -1*(sin(yaw) * vicon_vel.twist.linear.x + cos(yaw) * vicon_vel.twist.linear.y);
 	odom_msgs.twist.twist.linear.z = -vicon_vel.twist.linear.z;
-	
+
 	odom_msgs.twist.twist.angular.x = vicon_vel.twist.angular.x;
-	odom_msgs.twist.twist.angular.y = vicon_vel.twist.angular.y;
-	odom_msgs.twist.twist.angular.z = vicon_vel.twist.angular.z;
+	odom_msgs.twist.twist.angular.y = -vicon_vel.twist.angular.y;
+	odom_msgs.twist.twist.angular.z = -vicon_vel.twist.angular.z;
 
         odom_pub.publish(odom_msgs);
 
@@ -79,3 +89,4 @@ int main(int argc, char **argv)
 
     return 0;
 }
+ 
