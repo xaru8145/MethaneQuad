@@ -24,6 +24,10 @@ $ rosrun roscopter controller
 Necessary edits:
 - _auto_sys_startup.launch_ file: **uncomment** the mocap that you will be using and **change the username** in the path of the vrpn_client_ros launch files.
 - _param_startup.launch_ file: **change the username** in the path of the working_params parameter file.
-- _vrpn2odom.cpp_ file: 
-- _param_startup.launch_ file: **change the hostname**
+- _vrpn2odom.cpp_ file: **change the hostname**
+- _param_startup.launch_ file: **change the username**
 - _hosts_ file: **update** hostname and associated IP address (in /etc folder outside catkin_ws)
+- _Source the environment_
+```bash
+$ source /opt/ros/melodic/setup.bash
+```
