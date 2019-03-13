@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/vrpn2odom.dir/src/vrpn2odom.cpp.o"
-  "/home/xaru8145/catkin_ws/devel/lib/rosflight/vrpn2odom.pdb"
-  "/home/xaru8145/catkin_ws/devel/lib/rosflight/vrpn2odom"
+  "/home/odroid/catkin_ws/devel/lib/rosflight/vrpn2odom.pdb"
+  "/home/odroid/catkin_ws/devel/lib/rosflight/vrpn2odom"
 )
 
 # Per-language clean rules from dependency scanning.

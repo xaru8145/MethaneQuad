@@ -67,14 +67,14 @@ set(rosflight_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(rosflight_SOURCE_PREFIX /home/xaru8145/catkin_ws/src/rosflight/rosflight)
-  set(rosflight_DEVEL_PREFIX /home/xaru8145/catkin_ws/devel)
+  set(rosflight_SOURCE_PREFIX /home/odroid/catkin_ws/src/rosflight/rosflight)
+  set(rosflight_DEVEL_PREFIX /home/odroid/catkin_ws/devel)
   set(rosflight_INSTALL_PREFIX "")
   set(rosflight_PREFIX ${rosflight_DEVEL_PREFIX})
 else()
   set(rosflight_SOURCE_PREFIX "")
   set(rosflight_DEVEL_PREFIX "")
-  set(rosflight_INSTALL_PREFIX /home/xaru8145/catkin_ws/install)
+  set(rosflight_INSTALL_PREFIX /home/odroid/catkin_ws/install)
   set(rosflight_PREFIX ${rosflight_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(rosflight_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/xaru8145/catkin_ws/src/rosflight/rosflight/include;/usr/include;/usr/include/eigen3 " STREQUAL " ")
+if(NOT "/home/odroid/catkin_ws/src/rosflight/rosflight/include;/usr/include;/usr/include/eigen3 " STREQUAL " ")
   set(rosflight_INCLUDE_DIRS "")
-  set(_include_dirs "/home/xaru8145/catkin_ws/src/rosflight/rosflight/include;/usr/include;/usr/include/eigen3")
+  set(_include_dirs "/home/odroid/catkin_ws/src/rosflight/rosflight/include;/usr/include;/usr/include/eigen3")
   if(NOT "https://github.com/rosflight/rosflight/issues " STREQUAL " ")
     set(_report "Check the issue tracker 'https://github.com/rosflight/rosflight/issues' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT "http://rosflight.org " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/xaru8145/catkin_ws/src/rosflight/rosflight/include;/usr/include;/u
         message(FATAL_ERROR "Project 'rosflight' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'rosflight' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xaru8145/catkin_ws/src/rosflight/rosflight/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'rosflight' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/odroid/catkin_ws/src/rosflight/rosflight/${idir}'.  ${_report}")
     endif()
     _list_append_unique(rosflight_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "mavrosflight;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libpthread.so;yaml-cpp")
+set(libraries "mavrosflight;/usr/lib/arm-linux-gnueabihf/libboost_system.so;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;/usr/lib/arm-linux-gnueabihf/libpthread.so;yaml-cpp")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xaru8145/catkin_ws/devel/lib;/home/xaru8145/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/odroid/catkin_ws/devel/lib;/home/odroid/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

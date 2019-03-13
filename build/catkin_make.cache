@@ -1,2 +1,2 @@
-roscopter/roscopter:roscopter/roscopter_msgs:roscopter/roscopter_pkgs:roscopter/roscopter_sim:roscopter/roscopter_utils:rosflight/rosflight:rosflight/rosflight_firmware:rosflight/rosflight_msgs:rosflight/rosflight_pkgs:rosflight/rosflight_sim:rosflight/rosflight_utils:timed_roslaunch:vrpn_client_ros
--DCATKIN_DEVEL_PREFIX=/home/xaru8145/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/xaru8145/catkin_ws/install -G Unix Makefiles
+quadrotor_msgs:roscopter/roscopter:roscopter/roscopter_msgs:roscopter/roscopter_pkgs:roscopter/roscopter_sim:roscopter/roscopter_utils:rosflight/rosflight:rosflight/rosflight_firmware:rosflight/rosflight_msgs:rosflight/rosflight_pkgs:rosflight/rosflight_sim:rosflight/rosflight_utils:timed_roslaunch:vrpn_client_ros
+-DCATKIN_DEVEL_PREFIX=/home/odroid/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/odroid/catkin_ws/install -G Unix Makefiles

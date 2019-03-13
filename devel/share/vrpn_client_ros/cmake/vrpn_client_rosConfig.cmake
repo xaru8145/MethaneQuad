@@ -67,14 +67,14 @@ set(vrpn_client_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(vrpn_client_ros_SOURCE_PREFIX /home/xaru8145/catkin_ws/src/vrpn_client_ros)
-  set(vrpn_client_ros_DEVEL_PREFIX /home/xaru8145/catkin_ws/devel)
+  set(vrpn_client_ros_SOURCE_PREFIX /home/odroid/catkin_ws/src/vrpn_client_ros)
+  set(vrpn_client_ros_DEVEL_PREFIX /home/odroid/catkin_ws/devel)
   set(vrpn_client_ros_INSTALL_PREFIX "")
   set(vrpn_client_ros_PREFIX ${vrpn_client_ros_DEVEL_PREFIX})
 else()
   set(vrpn_client_ros_SOURCE_PREFIX "")
   set(vrpn_client_ros_DEVEL_PREFIX "")
-  set(vrpn_client_ros_INSTALL_PREFIX /home/xaru8145/catkin_ws/install)
+  set(vrpn_client_ros_INSTALL_PREFIX /home/odroid/catkin_ws/install)
   set(vrpn_client_ros_PREFIX ${vrpn_client_ros_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(vrpn_client_ros_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/xaru8145/catkin_ws/src/vrpn_client_ros/include;/opt/ros/kinetic/include " STREQUAL " ")
+if(NOT "/home/odroid/catkin_ws/src/vrpn_client_ros/include;/opt/ros/melodic/include " STREQUAL " ")
   set(vrpn_client_ros_INCLUDE_DIRS "")
-  set(_include_dirs "/home/xaru8145/catkin_ws/src/vrpn_client_ros/include;/opt/ros/kinetic/include")
+  set(_include_dirs "/home/odroid/catkin_ws/src/vrpn_client_ros/include;/opt/ros/melodic/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/xaru8145/catkin_ws/src/vrpn_client_ros/include;/opt/ros/kinetic/in
         message(FATAL_ERROR "Project 'vrpn_client_ros' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'vrpn_client_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xaru8145/catkin_ws/src/vrpn_client_ros/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'vrpn_client_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/odroid/catkin_ws/src/vrpn_client_ros/${idir}'.  ${_report}")
     endif()
     _list_append_unique(vrpn_client_ros_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "vrpn_client_ros;/opt/ros/kinetic/lib/libvrpn.a;/opt/ros/kinetic/lib/libquat.a;m;-lpthread")
+set(libraries "vrpn_client_ros;/opt/ros/melodic/lib/libvrpn.a;/opt/ros/melodic/lib/libquat.a;m;-lpthread")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xaru8145/catkin_ws/devel/lib;/home/xaru8145/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/odroid/catkin_ws/devel/lib;/home/odroid/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

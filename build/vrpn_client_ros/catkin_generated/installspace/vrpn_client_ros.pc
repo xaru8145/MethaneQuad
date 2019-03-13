@@ -1,8 +1,8 @@
-prefix=/home/xaru8145/catkin_ws/install
+prefix=/home/odroid/catkin_ws/install
 
 Name: vrpn_client_ros
 Description: Description of vrpn_client_ros
 Version: 0.2.2
-Cflags: -I/home/xaru8145/catkin_ws/install/include -I/opt/ros/kinetic/include
-Libs: -L/home/xaru8145/catkin_ws/install/lib -lvrpn_client_ros /opt/ros/kinetic/lib/libvrpn.a /opt/ros/kinetic/lib/libquat.a -lm -l-lpthread
+Cflags: -I/home/odroid/catkin_ws/install/include -I/opt/ros/melodic/include
+Libs: -L/home/odroid/catkin_ws/install/lib -lvrpn_client_ros /opt/ros/melodic/lib/libvrpn.a /opt/ros/melodic/lib/libquat.a -lm -l-lpthread
 Requires: geometry_msgs tf2_ros

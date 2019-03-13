@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter/src/controller/controller.cpp" "/home/xaru8145/catkin_ws/build/roscopter/roscopter/CMakeFiles/controller.dir/src/controller/controller.cpp.o"
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter/src/controller/controller_node.cpp" "/home/xaru8145/catkin_ws/build/roscopter/roscopter/CMakeFiles/controller.dir/src/controller/controller_node.cpp.o"
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter/src/controller/simple_pid.cpp" "/home/xaru8145/catkin_ws/build/roscopter/roscopter/CMakeFiles/controller.dir/src/controller/simple_pid.cpp.o"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter/src/controller/controller.cpp" "/home/odroid/catkin_ws/build/roscopter/roscopter/CMakeFiles/controller.dir/src/controller/controller.cpp.o"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter/src/controller/controller_node.cpp" "/home/odroid/catkin_ws/build/roscopter/roscopter/CMakeFiles/controller.dir/src/controller/controller_node.cpp.o"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter/src/controller/simple_pid.cpp" "/home/odroid/catkin_ws/build/roscopter/roscopter/CMakeFiles/controller.dir/src/controller/simple_pid.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,17 +19,17 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/xaru8145/catkin_ws/devel/include"
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter/include"
+  "/home/odroid/catkin_ws/devel/include"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter/include"
   "/usr/include/eigen3"
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_utils/include"
-  "/opt/ros/kinetic/include"
-  "/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_utils/include"
+  "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/xaru8145/catkin_ws/build/rosflight/rosflight_utils/CMakeFiles/rosflight_utils.dir/DependInfo.cmake"
+  "/home/odroid/catkin_ws/build/rosflight/rosflight_utils/CMakeFiles/rosflight_utils.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

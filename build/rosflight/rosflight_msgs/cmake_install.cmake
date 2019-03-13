@@ -1,8 +1,8 @@
-# Install script for directory: /home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs
+# Install script for directory: /home/odroid/catkin_ws/src/rosflight/rosflight_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xaru8145/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/odroid/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,71 +32,76 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs/msg" TYPE FILE FILES
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs/srv" TYPE FILE FILES
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
-    "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
+    "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs/cmake" TYPE FILE FILES "/home/xaru8145/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgs-msg-paths.cmake")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs/cmake" TYPE FILE FILES "/home/odroid/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgs-msg-paths.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/xaru8145/catkin_ws/devel/include/rosflight_msgs")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/odroid/catkin_ws/devel/include/rosflight_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/xaru8145/catkin_ws/devel/share/roseus/ros/rosflight_msgs")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/odroid/catkin_ws/devel/share/roseus/ros/rosflight_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/xaru8145/catkin_ws/devel/share/common-lisp/ros/rosflight_msgs")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/odroid/catkin_ws/devel/share/common-lisp/ros/rosflight_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/xaru8145/catkin_ws/devel/share/gennodejs/ros/rosflight_msgs")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/odroid/catkin_ws/devel/share/gennodejs/ros/rosflight_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/xaru8145/catkin_ws/devel/lib/python2.7/dist-packages/rosflight_msgs")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/odroid/catkin_ws/devel/lib/python2.7/dist-packages/rosflight_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/xaru8145/catkin_ws/devel/lib/python2.7/dist-packages/rosflight_msgs")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/odroid/catkin_ws/devel/lib/python2.7/dist-packages/rosflight_msgs")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xaru8145/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgs.pc")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/odroid/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgs.pc")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs/cmake" TYPE FILE FILES "/home/xaru8145/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgs-msg-extras.cmake")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs/cmake" TYPE FILE FILES "/home/odroid/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgs-msg-extras.cmake")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs/cmake" TYPE FILE FILES
-    "/home/xaru8145/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgsConfig.cmake"
-    "/home/xaru8145/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgsConfig-version.cmake"
+    "/home/odroid/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgsConfig.cmake"
+    "/home/odroid/catkin_ws/build/rosflight/rosflight_msgs/catkin_generated/installspace/rosflight_msgsConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs" TYPE FILE FILES "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_msgs" TYPE FILE FILES "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/package.xml")
 endif()
 

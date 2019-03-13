@@ -1,8 +1,8 @@
-# Install script for directory: /home/xaru8145/catkin_ws/src/rosflight/rosflight_utils
+# Install script for directory: /home/odroid/catkin_ws/src/rosflight/rosflight_utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xaru8145/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/odroid/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,18 +32,23 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xaru8145/catkin_ws/build/rosflight/rosflight_utils/catkin_generated/installspace/rosflight_utils.pc")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/odroid/catkin_ws/build/rosflight/rosflight_utils/catkin_generated/installspace/rosflight_utils.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_utils/cmake" TYPE FILE FILES
-    "/home/xaru8145/catkin_ws/build/rosflight/rosflight_utils/catkin_generated/installspace/rosflight_utilsConfig.cmake"
-    "/home/xaru8145/catkin_ws/build/rosflight/rosflight_utils/catkin_generated/installspace/rosflight_utilsConfig-version.cmake"
+    "/home/odroid/catkin_ws/build/rosflight/rosflight_utils/catkin_generated/installspace/rosflight_utilsConfig.cmake"
+    "/home/odroid/catkin_ws/build/rosflight/rosflight_utils/catkin_generated/installspace/rosflight_utilsConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_utils" TYPE FILE FILES "/home/xaru8145/catkin_ws/src/rosflight/rosflight_utils/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosflight_utils" TYPE FILE FILES "/home/odroid/catkin_ws/src/rosflight/rosflight_utils/package.xml")
 endif()
 

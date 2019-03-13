@@ -2,7 +2,7 @@
 
 message(STATUS "rosflight_msgs: 8 messages, 3 services")
 
-set(MSG_I_FLAGS "-Irosflight_msgs:/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irosflight_msgs:/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,59 +17,59 @@ add_custom_target(rosflight_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" ""
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" ""
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" "geometry_msgs/Vector3:geometry_msgs/Quaternion:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" "geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Vector3"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" "std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" ""
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
 add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" "std_msgs/Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosflight_msgs" "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" "std_msgs/Header"
 )
 
 #
@@ -79,69 +79,69 @@ add_custom_target(_rosflight_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 
 ### Generating Services
 _generate_srv_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_cpp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosflight_msgs
@@ -159,27 +159,27 @@ add_custom_target(rosflight_msgs_generate_messages_cpp
 add_dependencies(rosflight_msgs_generate_messages rosflight_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_cpp _rosflight_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -192,69 +192,69 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosflight_msgs_generate_messages_cp
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 
 ### Generating Services
 _generate_srv_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_eus(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/rosflight_msgs
@@ -272,27 +272,27 @@ add_custom_target(rosflight_msgs_generate_messages_eus
 add_dependencies(rosflight_msgs_generate_messages rosflight_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_eus _rosflight_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -305,69 +305,69 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosflight_msgs_generate_messages_eu
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 
 ### Generating Services
 _generate_srv_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_lisp(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosflight_msgs
@@ -385,27 +385,27 @@ add_custom_target(rosflight_msgs_generate_messages_lisp
 add_dependencies(rosflight_msgs_generate_messages rosflight_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_lisp _rosflight_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -418,69 +418,69 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosflight_msgs_generate_messages_li
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 
 ### Generating Services
 _generate_srv_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_nodejs(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/rosflight_msgs
@@ -498,27 +498,27 @@ add_custom_target(rosflight_msgs_generate_messages_nodejs
 add_dependencies(rosflight_msgs_generate_messages rosflight_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_nodejs _rosflight_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -531,69 +531,69 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosflight_msgs_generate_messages_no
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_msg_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 
 ### Generating Services
 _generate_srv_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
 )
 _generate_srv_py(rosflight_msgs
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs
@@ -611,27 +611,27 @@ add_custom_target(rosflight_msgs_generate_messages_py
 add_dependencies(rosflight_msgs_generate_messages rosflight_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/OutputRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Command.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/GPS.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamFile.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamGet.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Barometer.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Attitude.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Status.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/srv/ParamSet.srv" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/rosflight/rosflight_msgs/msg/Airspeed.msg" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/rosflight/rosflight_msgs/msg/RCRaw.msg" NAME_WE)
 add_dependencies(rosflight_msgs_generate_messages_py _rosflight_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -700,7 +700,7 @@ if(TARGET std_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs)
-  install(CODE "execute_process(COMMAND \"/usr/bin/python\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs\")")
+  install(CODE "execute_process(COMMAND \"/usr/bin/python2\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs\")")
   # install generated code
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosflight_msgs

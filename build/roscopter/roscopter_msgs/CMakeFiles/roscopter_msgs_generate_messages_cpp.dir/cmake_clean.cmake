@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/roscopter_msgs_generate_messages_cpp"
-  "/home/xaru8145/catkin_ws/devel/include/roscopter_msgs/AddWaypoint.h"
-  "/home/xaru8145/catkin_ws/devel/include/roscopter_msgs/SetWaypointsFromFile.h"
-  "/home/xaru8145/catkin_ws/devel/include/roscopter_msgs/RemoveWaypoint.h"
+  "/home/odroid/catkin_ws/devel/include/roscopter_msgs/AddWaypoint.h"
+  "/home/odroid/catkin_ws/devel/include/roscopter_msgs/SetWaypointsFromFile.h"
+  "/home/odroid/catkin_ws/devel/include/roscopter_msgs/RemoveWaypoint.h"
 )
 
 # Per-language clean rules from dependency scanning.

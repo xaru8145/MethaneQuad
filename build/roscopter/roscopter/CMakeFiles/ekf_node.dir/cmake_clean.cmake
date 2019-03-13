@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ekf_node.dir/src/ekf/ekf_node.cpp.o"
-  "/home/xaru8145/catkin_ws/devel/lib/roscopter/ekf_node.pdb"
-  "/home/xaru8145/catkin_ws/devel/lib/roscopter/ekf_node"
+  "/home/odroid/catkin_ws/devel/lib/roscopter/ekf_node.pdb"
+  "/home/odroid/catkin_ws/devel/lib/roscopter/ekf_node"
 )
 
 # Per-language clean rules from dependency scanning.

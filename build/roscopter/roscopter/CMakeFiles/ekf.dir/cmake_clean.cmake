@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ekf.dir/src/ekf/ekf_meas.cpp.o"
   "CMakeFiles/ekf.dir/src/ekf/ekf_helper.cpp.o"
   "CMakeFiles/ekf.dir/src/ekf/ekf_log.cpp.o"
-  "/home/xaru8145/catkin_ws/devel/lib/libekf.pdb"
-  "/home/xaru8145/catkin_ws/devel/lib/libekf.so"
+  "/home/odroid/catkin_ws/devel/lib/libekf.pdb"
+  "/home/odroid/catkin_ws/devel/lib/libekf.so"
 )
 
 # Per-language clean rules from dependency scanning.

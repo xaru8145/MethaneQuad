@@ -1,4 +1,3 @@
-
 /**
  * @file x_vel_step_test.cpp
  * @brief Adaptation of the offb_node.cpp script. Commands the

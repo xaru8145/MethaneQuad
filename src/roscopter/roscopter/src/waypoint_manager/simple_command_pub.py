@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+
 import rospy
 from geometry_msgs.msg import PoseStamped
 from rosflight_msgs.msg import Command
 from rosflight_msgs.msg import RCRaw
-from quadrotor_msgs.msg import PositionCommand
+# from quadrotor_msgs.msg import PositionCommand
 from nav_msgs.msg import Path
 
 class hl_cmd_handler(object):
@@ -32,10 +34,10 @@ class hl_cmd_handler(object):
         #uint8 IGNORE_F = 8
 
         self.hl_cmd = Command()
-        self.hl_cmd.ignore = 7
+        self.hl_cmd.ignore = 6
         self.hl_cmd.mode = 4
-        self.hl_cmd.x = 0.0
-        self.hl_cmd.y = 0.0
+        self.hl_cmd.x = -0.35
+        self.hl_cmd.y = -4.0
         self.hl_cmd.z = 0.0
         self.hl_cmd.F = -0.75
 

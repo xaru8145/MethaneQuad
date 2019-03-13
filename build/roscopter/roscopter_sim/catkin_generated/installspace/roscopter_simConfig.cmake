@@ -67,14 +67,14 @@ set(roscopter_sim_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(roscopter_sim_SOURCE_PREFIX /home/xaru8145/catkin_ws/src/roscopter/roscopter_sim)
-  set(roscopter_sim_DEVEL_PREFIX /home/xaru8145/catkin_ws/devel)
+  set(roscopter_sim_SOURCE_PREFIX /home/odroid/catkin_ws/src/roscopter/roscopter_sim)
+  set(roscopter_sim_DEVEL_PREFIX /home/odroid/catkin_ws/devel)
   set(roscopter_sim_INSTALL_PREFIX "")
   set(roscopter_sim_PREFIX ${roscopter_sim_DEVEL_PREFIX})
 else()
   set(roscopter_sim_SOURCE_PREFIX "")
   set(roscopter_sim_DEVEL_PREFIX "")
-  set(roscopter_sim_INSTALL_PREFIX /home/xaru8145/catkin_ws/install)
+  set(roscopter_sim_INSTALL_PREFIX /home/odroid/catkin_ws/install)
   set(roscopter_sim_PREFIX ${roscopter_sim_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(roscopter_sim_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "include;/usr/include/eigen3;/usr/include;/usr/include/gazebo-7;/usr/include/sdformat-4.0;/usr/include/ignition/math2;/usr/include/OGRE;/usr/include/OGRE/Terrain;/usr/include/OGRE/Paging " STREQUAL " ")
+if(NOT "include;/usr/include/eigen3;/usr/include;/usr/include/gazebo-9;/usr/include/bullet;/usr/include/simbody;/usr/include/sdformat-6.0;/usr/include/ignition/math4;/usr/include/OGRE;/usr/include/OGRE/Terrain;/usr/include/OGRE/Paging;/usr/include/ignition/transport4;/usr/include/ignition/msgs1;/usr/include/ignition/common1;/usr/include/ignition/fuel_tools1 " STREQUAL " ")
   set(roscopter_sim_INCLUDE_DIRS "")
-  set(_include_dirs "include;/usr/include/eigen3;/usr/include;/usr/include/gazebo-7;/usr/include/sdformat-4.0;/usr/include/ignition/math2;/usr/include/OGRE;/usr/include/OGRE/Terrain;/usr/include/OGRE/Paging")
+  set(_include_dirs "include;/usr/include/eigen3;/usr/include;/usr/include/gazebo-9;/usr/include/bullet;/usr/include/simbody;/usr/include/sdformat-6.0;/usr/include/ignition/math4;/usr/include/OGRE;/usr/include/OGRE/Terrain;/usr/include/OGRE/Paging;/usr/include/ignition/transport4;/usr/include/ignition/msgs1;/usr/include/ignition/common1;/usr/include/ignition/fuel_tools1")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "include;/usr/include/eigen3;/usr/include;/usr/include/gazebo-7;/usr/incl
         message(FATAL_ERROR "Project 'roscopter_sim' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'roscopter_sim' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xaru8145/catkin_ws/install/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'roscopter_sim' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/odroid/catkin_ws/install/${idir}'.  ${_report}")
     endif()
     _list_append_unique(roscopter_sim_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "/usr/lib/x86_64-linux-gnu/libgazebo.so;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;/usr/lib/x86_64-linux-gnu/libboost_signals.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;/usr/lib/x86_64-linux-gnu/libboost_regex.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread;/usr/lib/x86_64-linux-gnu/libsdformat.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;/usr/lib/x86_64-linux-gnu/libignition-math2.so")
+set(libraries "BulletSoftBody;BulletDynamics;BulletCollision;LinearMath;/usr/lib/arm-linux-gnueabihf/libSimTKsimbody.so;/usr/lib/arm-linux-gnueabihf/libSimTKmath.so;/usr/lib/arm-linux-gnueabihf/libSimTKcommon.so;/usr/lib/arm-linux-gnueabihf/liblapack.so;/usr/lib/arm-linux-gnueabihf/libblas.so;pthread;rt;dl;m;/usr/lib/arm-linux-gnueabihf/libgazebo.so;/usr/lib/arm-linux-gnueabihf/libgazebo_client.so;/usr/lib/arm-linux-gnueabihf/libgazebo_gui.so;/usr/lib/arm-linux-gnueabihf/libgazebo_sensors.so;/usr/lib/arm-linux-gnueabihf/libgazebo_rendering.so;/usr/lib/arm-linux-gnueabihf/libgazebo_physics.so;/usr/lib/arm-linux-gnueabihf/libgazebo_ode.so;/usr/lib/arm-linux-gnueabihf/libgazebo_transport.so;/usr/lib/arm-linux-gnueabihf/libgazebo_msgs.so;/usr/lib/arm-linux-gnueabihf/libgazebo_util.so;/usr/lib/arm-linux-gnueabihf/libgazebo_common.so;/usr/lib/arm-linux-gnueabihf/libgazebo_gimpact.so;/usr/lib/arm-linux-gnueabihf/libgazebo_opcode.so;/usr/lib/arm-linux-gnueabihf/libgazebo_opende_ou.so;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;/usr/lib/arm-linux-gnueabihf/libboost_iostreams.so;/usr/lib/arm-linux-gnueabihf/libprotobuf.so;-lpthread;/usr/lib/arm-linux-gnueabihf/libsdformat.so;optimized;/usr/lib/arm-linux-gnueabihf/libOgreMain.so;debug;/usr/lib/arm-linux-gnueabihf/libOgreMain.so;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;/usr/lib/arm-linux-gnueabihf/libboost_system.so;/usr/lib/arm-linux-gnueabihf/libboost_atomic.so;/usr/lib/arm-linux-gnueabihf/libboost_chrono.so;/usr/lib/arm-linux-gnueabihf/libpthread.so;optimized;/usr/lib/arm-linux-gnueabihf/libOgreTerrain.so;debug;/usr/lib/arm-linux-gnueabihf/libOgreTerrain.so;optimized;/usr/lib/arm-linux-gnueabihf/libOgrePaging.so;debug;/usr/lib/arm-linux-gnueabihf/libOgrePaging.so;/usr/lib/arm-linux-gnueabihf/libignition-math4.so.4.0.0;/usr/lib/arm-linux-gnueabihf/libignition-transport4.so.4.0.0;/usr/lib/arm-linux-gnueabihf/libignition-msgs1.so.1.0.0;/usr/lib/arm-linux-gnueabihf/libignition-common1.so.1.0.1;/usr/lib/arm-linux-gnueabihf/libignition-fuel_tools1.so.1.0.0")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xaru8145/catkin_ws/install/lib;/home/xaru8145/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/odroid/catkin_ws/install/lib;/home/odroid/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,8 +1,8 @@
-prefix=/home/xaru8145/catkin_ws/install
+prefix=/home/odroid/catkin_ws/install
 
 Name: timed_roslaunch
 Description: Description of timed_roslaunch
 Version: 0.1.3
 Cflags: 
-Libs: -L/home/xaru8145/catkin_ws/install/lib 
+Libs: -L/home/odroid/catkin_ws/install/lib 
 Requires: 

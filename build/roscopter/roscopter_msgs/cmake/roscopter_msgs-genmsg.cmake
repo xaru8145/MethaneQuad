@@ -17,19 +17,19 @@ add_custom_target(roscopter_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
 add_custom_target(_roscopter_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "roscopter_msgs" "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "roscopter_msgs" "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" ""
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
 add_custom_target(_roscopter_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "roscopter_msgs" "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "roscopter_msgs" "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" ""
 )
 
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
 add_custom_target(_roscopter_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "roscopter_msgs" "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "roscopter_msgs" "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" ""
 )
 
 #
@@ -41,19 +41,19 @@ add_custom_target(_roscopter_msgs_generate_messages_check_deps_${_filename}
 
 ### Generating Services
 _generate_srv_cpp(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_cpp(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_cpp(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/roscopter_msgs
@@ -71,11 +71,11 @@ add_custom_target(roscopter_msgs_generate_messages_cpp
 add_dependencies(roscopter_msgs_generate_messages roscopter_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_cpp _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_cpp _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_cpp _roscopter_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -90,19 +90,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS roscopter_msgs_generate_messages_cp
 
 ### Generating Services
 _generate_srv_eus(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_eus(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_eus(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/roscopter_msgs
@@ -120,11 +120,11 @@ add_custom_target(roscopter_msgs_generate_messages_eus
 add_dependencies(roscopter_msgs_generate_messages roscopter_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_eus _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_eus _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_eus _roscopter_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -139,19 +139,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS roscopter_msgs_generate_messages_eu
 
 ### Generating Services
 _generate_srv_lisp(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_lisp(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_lisp(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/roscopter_msgs
@@ -169,11 +169,11 @@ add_custom_target(roscopter_msgs_generate_messages_lisp
 add_dependencies(roscopter_msgs_generate_messages roscopter_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_lisp _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_lisp _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_lisp _roscopter_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -188,19 +188,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS roscopter_msgs_generate_messages_li
 
 ### Generating Services
 _generate_srv_nodejs(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_nodejs(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_nodejs(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/roscopter_msgs
@@ -218,11 +218,11 @@ add_custom_target(roscopter_msgs_generate_messages_nodejs
 add_dependencies(roscopter_msgs_generate_messages roscopter_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_nodejs _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_nodejs _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_nodejs _roscopter_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -237,19 +237,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS roscopter_msgs_generate_messages_no
 
 ### Generating Services
 _generate_srv_py(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_py(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/roscopter_msgs
 )
 _generate_srv_py(roscopter_msgs
-  "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
+  "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/roscopter_msgs
@@ -267,11 +267,11 @@ add_custom_target(roscopter_msgs_generate_messages_py
 add_dependencies(roscopter_msgs_generate_messages roscopter_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/AddWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_py _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/SetWaypointsFromFile.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_py _roscopter_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/xaru8145/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
+get_filename_component(_filename "/home/odroid/catkin_ws/src/roscopter/roscopter_msgs/srv/RemoveWaypoint.srv" NAME_WE)
 add_dependencies(roscopter_msgs_generate_messages_py _roscopter_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -316,7 +316,7 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/roscopter_msgs)
-  install(CODE "execute_process(COMMAND \"/usr/bin/python\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/roscopter_msgs\")")
+  install(CODE "execute_process(COMMAND \"/usr/bin/python2\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/roscopter_msgs\")")
   # install generated code
   install(
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/roscopter_msgs

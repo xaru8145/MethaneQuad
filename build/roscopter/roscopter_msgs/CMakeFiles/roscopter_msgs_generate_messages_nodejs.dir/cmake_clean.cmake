@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/roscopter_msgs_generate_messages_nodejs"
-  "/home/xaru8145/catkin_ws/devel/share/gennodejs/ros/roscopter_msgs/srv/AddWaypoint.js"
-  "/home/xaru8145/catkin_ws/devel/share/gennodejs/ros/roscopter_msgs/srv/SetWaypointsFromFile.js"
-  "/home/xaru8145/catkin_ws/devel/share/gennodejs/ros/roscopter_msgs/srv/RemoveWaypoint.js"
+  "/home/odroid/catkin_ws/devel/share/gennodejs/ros/roscopter_msgs/srv/AddWaypoint.js"
+  "/home/odroid/catkin_ws/devel/share/gennodejs/ros/roscopter_msgs/srv/SetWaypointsFromFile.js"
+  "/home/odroid/catkin_ws/devel/share/gennodejs/ros/roscopter_msgs/srv/RemoveWaypoint.js"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_firmware/src/udp_board.cpp" "/home/xaru8145/catkin_ws/build/rosflight/rosflight_firmware/CMakeFiles/rosflight_udp_board.dir/src/udp_board.cpp.o"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_firmware/src/udp_board.cpp" "/home/odroid/catkin_ws/build/rosflight/rosflight_firmware/CMakeFiles/rosflight_udp_board.dir/src/udp_board.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,15 +17,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_firmware/include"
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_firmware/firmware/include"
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_firmware/firmware/lib"
-  "/home/xaru8145/catkin_ws/src/rosflight/rosflight_firmware/firmware/comms"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_firmware/include"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_firmware/firmware/include"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_firmware/firmware/lib"
+  "/home/odroid/catkin_ws/src/rosflight/rosflight_firmware/firmware/comms"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/xaru8145/catkin_ws/build/rosflight/rosflight_firmware/CMakeFiles/rosflight_firmware.dir/DependInfo.cmake"
+  "/home/odroid/catkin_ws/build/rosflight/rosflight_firmware/CMakeFiles/rosflight_firmware.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/xaru8145/catkin_ws/src/timed_roslaunch
+# Install script for directory: /home/odroid/catkin_ws/src/timed_roslaunch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xaru8145/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/odroid/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,30 +32,35 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xaru8145/catkin_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunch.pc")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/odroid/catkin_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunch.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/cmake" TYPE FILE FILES
-    "/home/xaru8145/catkin_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig.cmake"
-    "/home/xaru8145/catkin_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig-version.cmake"
+    "/home/odroid/catkin_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig.cmake"
+    "/home/odroid/catkin_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig-version.cmake"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch" TYPE FILE FILES "/home/xaru8145/catkin_ws/src/timed_roslaunch/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch" TYPE FILE FILES "/home/odroid/catkin_ws/src/timed_roslaunch/package.xml")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/timed_roslaunch" TYPE PROGRAM FILES "/home/xaru8145/catkin_ws/src/timed_roslaunch/scripts/timed_roslaunch.sh")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/timed_roslaunch" TYPE PROGRAM FILES "/home/odroid/catkin_ws/src/timed_roslaunch/scripts/timed_roslaunch.sh")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/launch" TYPE DIRECTORY FILES "/home/xaru8145/catkin_ws/src/timed_roslaunch/launch/")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/launch" TYPE DIRECTORY FILES "/home/odroid/catkin_ws/src/timed_roslaunch/launch/")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/test" TYPE DIRECTORY FILES "/home/xaru8145/catkin_ws/src/timed_roslaunch/test/")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/test" TYPE DIRECTORY FILES "/home/odroid/catkin_ws/src/timed_roslaunch/test/")
 endif()
 

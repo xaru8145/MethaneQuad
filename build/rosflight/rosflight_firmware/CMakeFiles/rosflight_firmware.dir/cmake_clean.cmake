@@ -12,8 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/rosflight_firmware.dir/firmware/src/comm_manager.cpp.o"
   "CMakeFiles/rosflight_firmware.dir/firmware/comms/mavlink/mavlink.cpp.o"
   "CMakeFiles/rosflight_firmware.dir/firmware/lib/turbomath/turbomath.cpp.o"
-  "/home/xaru8145/catkin_ws/devel/lib/librosflight_firmware.pdb"
-  "/home/xaru8145/catkin_ws/devel/lib/librosflight_firmware.so"
+  "/home/odroid/catkin_ws/devel/lib/librosflight_firmware.pdb"
+  "/home/odroid/catkin_ws/devel/lib/librosflight_firmware.so"
 )
 
 # Per-language clean rules from dependency scanning.
