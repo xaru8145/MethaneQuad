@@ -34,12 +34,12 @@ class hl_cmd_handler(object):
         #uint8 IGNORE_F = 8
 
         self.hl_cmd = Command()
-        self.hl_cmd.ignore = 6
+        self.hl_cmd.ignore = 0
         self.hl_cmd.mode = 4
-        self.hl_cmd.x = -0.35
-        self.hl_cmd.y = -4.0
+        self.hl_cmd.x = 0.0
+        self.hl_cmd.y = 0.0
         self.hl_cmd.z = 0.0
-        self.hl_cmd.F = -0.75
+        self.hl_cmd.F = -1
 
     def rc_cb(self, data):
         self.rc_msg = data

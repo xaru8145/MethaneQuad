@@ -16,6 +16,8 @@
 
 <include file="/home/odroid/catkin_ws/src/roscopter/roscopter/launch/load_params.launch" />
 
+<rosparam command="load" file="$(find roscopter)/params/waypoints.yaml" />
+
 <!-- <node pkg="roscopter" name="simple_command" type="simple_command_pub.py" output="screen" /> -->
 
 </launch>

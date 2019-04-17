@@ -13,6 +13,9 @@
 #include <math.h>
 #include <nav_msgs/Odometry.h>
 #include <tf/tf.h>
+#include <iostream>
+
+using namespace std;
 
 // Vicon Pose Callback
 geometry_msgs::PoseStamped vicon_pose;
@@ -25,11 +28,37 @@ geometry_msgs::TwistStamped vicon_vel;
 void vicon_vel_cb(const geometry_msgs::TwistStamped::ConstPtr& msg){
     vicon_vel = *msg;
 }
+geometry_msgs::TwistStamped radar_fwd_vel;
+void radar_fwd_vel_cb(const geometry_msgs::TwistStamped::ConstPtr& msg){
+    radar_fwd_vel = *msg;
+}
 
-int main(int argc, char **argv)
+geometry_msgs::TwistStamped radar_lat_vel;
+void radar_lat_vel_cb(const geometry_msgs::TwistStamped::ConstPtr& msg){
+    radar_lat_vel = *msg;
+}
+
+int main(int argc, char *argv[])
 {
+    std::string robot_name;
     ros::init(argc, argv, "offb_node");
-    ros::NodeHandle nh;
+    ros::NodeHandle nh("~");
+    nh.getParam("robot_name", robot_name);
+    
+    
+    // Code to test functionality of passing parameter
+    ROS_INFO("Got robot_name : %s", robot_name.c_str());
+    ROS_INFO("Got subscriber name: %s", robot_name + "/vrpn_client_node/pose");
+
+   if(robot_name.compare("methane_quad2") == 0)
+    {
+        cout << "marble_nuc5" << endl;
+    }
+    else
+    {
+        cout << "Don't run anything!" << endl;
+    }
+    
 
     // Subscribers
     ros::Subscriber vicon_pose_sub = nh.subscribe<geometry_msgs::PoseStamped>
@@ -37,11 +66,15 @@ int main(int argc, char **argv)
     ros::Subscriber vicon_vel_sub = nh.subscribe<geometry_msgs::TwistStamped>
             ("/vrpn_client_node/methane_quad2/twist", 10, vicon_vel_cb);
 
+    ros::Subscriber radar_fwd_vel_sub = nh.subscribe<geometry_msgs::TwistStamped>
+            ("/radar_fwd/twist_estimate", 10, radar_fwd_vel_cb);
+    ros::Subscriber radar_lat_vel_sub = nh.subscribe<geometry_msgs::TwistStamped>
+            ("/radar_lat/twist_estimate", 10, radar_lat_vel_cb);
     // Publishers
     ros::Publisher odom_pub = nh.advertise<nav_msgs::Odometry>
             ("odom", 10);
-
-
+    
+    
     //the setpoint publishing rate MUST be faster than 2Hz
     ros::Rate rate(50.0);
 
@@ -72,9 +105,9 @@ int main(int argc, char **argv)
         tf::Matrix3x3(tf_quat).getRPY(roll, pitch, yaw);
 	yaw = -yaw;
 
-        odom_msgs.twist.twist.linear.x = cos(yaw) * vicon_vel.twist.linear.x - sin(yaw) * vicon_vel.twist.linear.y;
+	odom_msgs.twist.twist.linear.x = cos(yaw) * vicon_vel.twist.linear.x - sin(yaw) * vicon_vel.twist.linear.y;
 	odom_msgs.twist.twist.linear.y = -1*(sin(yaw) * vicon_vel.twist.linear.x + cos(yaw) * vicon_vel.twist.linear.y);
-	odom_msgs.twist.twist.linear.z = -vicon_vel.twist.linear.z;
+	odom_msgs.twist.twist.linear.z = -vicon_vel.twist.linear.z;	
 
 	odom_msgs.twist.twist.angular.x = vicon_vel.twist.angular.x;
 	odom_msgs.twist.twist.angular.y = -vicon_vel.twist.angular.y;
@@ -88,4 +121,3 @@ int main(int argc, char **argv)
 
     return 0;
 }
- 

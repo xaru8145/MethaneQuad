@@ -34,7 +34,7 @@ Controller::Controller() :
   _server.setCallback(_func);
 
   // Set up Publishers and Subscriber
-  state_sub_ = nh_.subscribe("odom", 1, &Controller::stateCallback, this);
+  state_sub_ = nh_.subscribe("vrpn2odom/odom", 1, &Controller::stateCallback, this);
   is_flying_sub_ =
       nh_.subscribe("is_flying", 1, &Controller::isFlyingCallback, this);
   cmd_sub_ =
@@ -141,6 +141,8 @@ void Controller::cmdCallback(const rosflight_msgs::CommandConstPtr &msg)
                 msg->mode);
       break;
   }
+  
+// ROS_INFO("x: %f, y: %f, z: %f, psi: %f", xc_.pn, xc_.pe, xc_.pd, xc_.psi);
 }
 
 void Controller::reconfigure_callback(roscopter::ControllerConfig& config,
@@ -181,7 +183,8 @@ void Controller::reconfigure_callback(roscopter::ControllerConfig& config,
   D = config.down_D;
   max_.d_dot = config.max_d_dot;
   PID_d_.setGains(P, I, D, tau, max_.d_dot, -max_.d_dot);
-  ROS_INFO("P: %f, I: %f, D: %f, max_d_dot: %f", P, I, D, max_.d_dot);
+ 
+ ROS_INFO("P: %f, I: %f, D: %f, max_d_dot: %f", P, I, D, max_.d_dot);
 
   P = config.psi_P;
   I = config.psi_I;
@@ -222,6 +225,9 @@ void Controller::computeControl(double dt)
     double pndot_c = PID_n_.computePID(xc_.pn, xhat_.pn, dt);
     double pedot_c = PID_e_.computePID(xc_.pe, xhat_.pe, dt);
 
+    ROS_INFO_THROTTLE(1, "pndot_c %f", pndot_c);
+    ROS_INFO_THROTTLE(1, "pedot_c %f", pedot_c);
+
     // Calculate desired yaw rate
     // First, determine the shortest direction to the commanded psi
     if(fabs(xc_.psi + 2*M_PI - xhat_.psi) < fabs(xc_.psi - xhat_.psi))
@@ -242,8 +248,10 @@ void Controller::computeControl(double dt)
 	
     ROS_INFO_THROTTLE(1, "wrapped xc_.r %f", xc_.r);
 
-
+    xc_.x_dot = pndot_c*cos(xhat_.psi) + pedot_c*sin(xhat_.psi);
     xc_.y_dot = -pndot_c*sin(xhat_.psi) + pedot_c*cos(xhat_.psi);
+    ROS_INFO_THROTTLE(1, "xc_.x_dot %f", xc_.x_dot);
+    ROS_INFO_THROTTLE(1, "xc_.y_dot %f", xc_.y_dot);
 
     mode_flag = rosflight_msgs::Command::MODE_XVEL_YVEL_YAWRATE_ALTITUDE;
   }
@@ -264,6 +272,12 @@ void Controller::computeControl(double dt)
 
     xc_.ax = PID_x_dot_.computePID(xc_.x_dot, pxdot, dt);
     xc_.ay = PID_y_dot_.computePID(xc_.y_dot, pydot, dt);
+
+    ROS_INFO_THROTTLE(1, "pxdot %f", pxdot);
+    ROS_INFO_THROTTLE(1, "pydot %f", pydot);
+
+    ROS_INFO_THROTTLE(1, "xc_.ax %f", xc_.ax);
+    ROS_INFO_THROTTLE(1, "xc_.ay %f", xc_.ay);
 
     // Nested Loop for Altitude
     double pddot_c = PID_d_.computePID(xc_.pd, xhat_.pd, dt, pddot);

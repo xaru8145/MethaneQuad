@@ -15,17 +15,28 @@ class WaypointManager():
 
         # get parameters
         try:
-            self.waypoint_list = rospy.get_param('~waypoints')
-        except KeyError:
+            self.waypoint_list = rospy.get_param('/waypoint_manager/waypoints')
+            rospy.loginfo(self.waypoint_list)
+       except KeyError:
             rospy.logfatal('waypoints not set')
             rospy.signal_shutdown('Parameters not set')
 
 
         # how close does the MAV need to get before going to the next waypoint?
-        self.threshold = rospy.get_param('~threshold', 5)
-        self.cyclical_path = rospy.get_param('~cycle', True)
+        self.threshold = rospy.get_param('/waypoint_manager/threshold', 0.5)
+        self.cyclical_path = rospy.get_param('/waypoint_manager/cycle', False) 
 
         self.prev_time = rospy.Time.now()
+        # Set up Last Position Variable (used for yaw wrapping)
+	self.last_position = 0
+	global error_x
+	global error_y
+	global error_F
+	global error_z
+	error_x = 0
+	error_y = 0
+	error_F = 0
+	error_z = 0
 
         # set up Services
         self.add_waypoint_service = rospy.Service('add_waypoint', AddWaypoint, self.addWaypointCallback)
@@ -33,7 +44,8 @@ class WaypointManager():
         self.set_waypoint_from_file_service = rospy.Service('set_waypoints_from_file', SetWaypointsFromFile, self.addWaypointCallback)
 
         # Set Up Publishers and Subscribers
-        self.xhat_sub_ = rospy.Subscriber('state', Odometry, self.odometryCallback, queue_size=5)
+        rospy.loginfo("Set Up Publishers and Subscribers")
+        self.xhat_sub_ = rospy.Subscriber('/vrpn2odom/odom', Odometry, self.odometryCallback, queue_size=5)
         self.waypoint_pub_ = rospy.Publisher('high_level_command', Command, queue_size=5, latch=True)
 
         self.current_waypoint_index = 0
@@ -73,11 +85,31 @@ class WaypointManager():
         (r, p, y) = tf.transformations.euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])
         current_position = np.array([msg.pose.pose.position.x,
                                      msg.pose.pose.position.y,
-                                     msg.pose.pose.position.z])
+                                     msg.pose.pose.position.z,
+                                     -y])
 
-        error = np.linalg.norm(current_position - current_waypoint[0:3])
+        rospy.loginfo_throttle(1, current_waypoint)
+	rospy.loginfo_throttle(1, current_position)
+        error_x = current_waypoint[0] - current_position[0]
+        error_y = current_waypoint[1] - current_position[1]
+        error_F = current_waypoint[2] - current_position[2]
+        error_z = current_waypoint[3] - current_position[3]
+	if error_z >  0.95 * 6.283:
+		error_z = error_z - 6.283
+        if error_z < -0.95 * 6.283:
+                error_z = error_z + 6.283
 
-        if error < self.threshold:
+        #error = np.linalg.norm(current_position - current_waypoint[0:3])
+
+        rospy.loginfo_throttle(1, error_x)
+        rospy.loginfo_throttle(1, error_y)
+        rospy.loginfo_throttle(1, error_F)
+	rospy.loginfo_throttle(1, error_z)
+	self.last_position = current_position[3]
+
+        #if error < self.threshold:
+        if -0.4 < error_x < 0.4 and -0.4 < error_y < 0.4 and -0.4 < error_F < 0.4 and -0.4 < error_z < 0.4:
+            rospy.loginfo("move to next waypoint")
             # Get new waypoint index
             self.current_waypoint_index += 1
             if self.cyclical_path:
