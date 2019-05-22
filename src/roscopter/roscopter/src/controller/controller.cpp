@@ -184,7 +184,7 @@ void Controller::reconfigure_callback(roscopter::ControllerConfig& config,
   max_.d_dot = config.max_d_dot;
   PID_d_.setGains(P, I, D, tau, max_.d_dot, -max_.d_dot);
  
- ROS_INFO("P: %f, I: %f, D: %f, max_d_dot: %f", P, I, D, max_.d_dot);
+// ROS_INFO("P: %f, I: %f, D: %f, max_d_dot: %f", P, I, D, max_.d_dot);
 
   P = config.psi_P;
   I = config.psi_I;
@@ -225,8 +225,8 @@ void Controller::computeControl(double dt)
     double pndot_c = PID_n_.computePID(xc_.pn, xhat_.pn, dt);
     double pedot_c = PID_e_.computePID(xc_.pe, xhat_.pe, dt);
 
-    ROS_INFO_THROTTLE(1, "pndot_c %f", pndot_c);
-    ROS_INFO_THROTTLE(1, "pedot_c %f", pedot_c);
+  //  ROS_INFO_THROTTLE(1, "pndot_c %f", pndot_c);
+  //  ROS_INFO_THROTTLE(1, "pedot_c %f", pedot_c);
 
     // Calculate desired yaw rate
     // First, determine the shortest direction to the commanded psi
@@ -239,19 +239,19 @@ void Controller::computeControl(double dt)
       xc_.psi -= 2*M_PI;
     }
 
-    ROS_INFO_THROTTLE(1, "wrapped xc_.psi %f", xc_.psi);
+   // ROS_INFO_THROTTLE(1, "wrapped xc_.psi %f", xc_.psi);
 
     xc_.r = PID_psi_.computePID(xc_.psi, xhat_.psi, dt);
 
 
-    ROS_INFO_THROTTLE(1, "wrapped xhat_.psi %f", xhat_.psi);
+   // ROS_INFO_THROTTLE(1, "wrapped xhat_.psi %f", xhat_.psi);
 	
-    ROS_INFO_THROTTLE(1, "wrapped xc_.r %f", xc_.r);
+   // ROS_INFO_THROTTLE(1, "wrapped xc_.r %f", xc_.r);
 
     xc_.x_dot = pndot_c*cos(xhat_.psi) + pedot_c*sin(xhat_.psi);
     xc_.y_dot = -pndot_c*sin(xhat_.psi) + pedot_c*cos(xhat_.psi);
-    ROS_INFO_THROTTLE(1, "xc_.x_dot %f", xc_.x_dot);
-    ROS_INFO_THROTTLE(1, "xc_.y_dot %f", xc_.y_dot);
+   // ROS_INFO_THROTTLE(1, "xc_.x_dot %f", xc_.x_dot);
+   // ROS_INFO_THROTTLE(1, "xc_.y_dot %f", xc_.y_dot);
 
     mode_flag = rosflight_msgs::Command::MODE_XVEL_YVEL_YAWRATE_ALTITUDE;
   }
@@ -273,11 +273,11 @@ void Controller::computeControl(double dt)
     xc_.ax = PID_x_dot_.computePID(xc_.x_dot, pxdot, dt);
     xc_.ay = PID_y_dot_.computePID(xc_.y_dot, pydot, dt);
 
-    ROS_INFO_THROTTLE(1, "pxdot %f", pxdot);
-    ROS_INFO_THROTTLE(1, "pydot %f", pydot);
+    //ROS_INFO_THROTTLE(1, "pxdot %f", pxdot);
+    //ROS_INFO_THROTTLE(1, "pydot %f", pydot);
 
-    ROS_INFO_THROTTLE(1, "xc_.ax %f", xc_.ax);
-    ROS_INFO_THROTTLE(1, "xc_.ay %f", xc_.ay);
+    //ROS_INFO_THROTTLE(1, "xc_.ax %f", xc_.ax);
+    //ROS_INFO_THROTTLE(1, "xc_.ay %f", xc_.ay);
 
     // Nested Loop for Altitude
     double pddot_c = PID_d_.computePID(xc_.pd, xhat_.pd, dt, pddot);
@@ -300,6 +300,8 @@ void Controller::computeControl(double dt)
       xc_.phi = 0;
       xc_.theta = 0;
     }
+
+    ROS_INFO_THROTTLE(1, "xc_.theta %f", xc_.theta);
 
     // Compute desired thrust based on current pose
     double cosp = cos(xhat_.phi);

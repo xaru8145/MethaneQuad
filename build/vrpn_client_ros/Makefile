@@ -80,16 +80,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : test/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -102,17 +102,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -122,6 +111,17 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -166,6 +166,36 @@ preinstall/fast:
 depend:
 	cd /home/odroid/catkin_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule
+.PHONY : vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule
+
+# Convenience name for target.
+_run_tests_vrpn_client_ros: vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule
+
+.PHONY : _run_tests_vrpn_client_ros
+
+# fast build rule for target.
+_run_tests_vrpn_client_ros/fast:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/build.make vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/build
+.PHONY : _run_tests_vrpn_client_ros/fast
+
+# Convenience name for target.
+vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule
+.PHONY : vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule
+
+# Convenience name for target.
+run_tests_vrpn_client_ros_roslaunch-check_launch: vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule
+
+.PHONY : run_tests_vrpn_client_ros_roslaunch-check_launch
+
+# fast build rule for target.
+run_tests_vrpn_client_ros_roslaunch-check_launch/fast:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/build.make vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/build
+.PHONY : run_tests_vrpn_client_ros_roslaunch-check_launch/fast
 
 # Convenience name for target.
 vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros.dir/rule:
@@ -213,36 +243,6 @@ roslint_vrpn_client_ros/fast:
 .PHONY : roslint_vrpn_client_ros/fast
 
 # Convenience name for target.
-vrpn_client_ros/CMakeFiles/roslint.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/roslint.dir/rule
-.PHONY : vrpn_client_ros/CMakeFiles/roslint.dir/rule
-
-# Convenience name for target.
-roslint: vrpn_client_ros/CMakeFiles/roslint.dir/rule
-
-.PHONY : roslint
-
-# fast build rule for target.
-roslint/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f vrpn_client_ros/CMakeFiles/roslint.dir/build.make vrpn_client_ros/CMakeFiles/roslint.dir/build
-.PHONY : roslint/fast
-
-# Convenience name for target.
-vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule
-.PHONY : vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule
-
-# Convenience name for target.
-vrpn_client_ros: vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule
-
-.PHONY : vrpn_client_ros
-
-# fast build rule for target.
-vrpn_client_ros/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/build.make vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/build
-.PHONY : vrpn_client_ros/fast
-
-# Convenience name for target.
 vrpn_client_ros/CMakeFiles/vrpn_client_node.dir/rule:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/vrpn_client_node.dir/rule
 .PHONY : vrpn_client_ros/CMakeFiles/vrpn_client_node.dir/rule
@@ -258,34 +258,19 @@ vrpn_client_node/fast:
 .PHONY : vrpn_client_node/fast
 
 # Convenience name for target.
-vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule
-.PHONY : vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule
+vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule
+.PHONY : vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule
 
 # Convenience name for target.
-_run_tests_vrpn_client_ros: vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/rule
+vrpn_client_ros: vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/rule
 
-.PHONY : _run_tests_vrpn_client_ros
+.PHONY : vrpn_client_ros
 
 # fast build rule for target.
-_run_tests_vrpn_client_ros/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/build.make vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros.dir/build
-.PHONY : _run_tests_vrpn_client_ros/fast
-
-# Convenience name for target.
-vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule
-.PHONY : vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule
-
-# Convenience name for target.
-run_tests_vrpn_client_ros_roslaunch-check_launch: vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/rule
-
-.PHONY : run_tests_vrpn_client_ros_roslaunch-check_launch
-
-# fast build rule for target.
-run_tests_vrpn_client_ros_roslaunch-check_launch/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/build.make vrpn_client_ros/CMakeFiles/run_tests_vrpn_client_ros_roslaunch-check_launch.dir/build
-.PHONY : run_tests_vrpn_client_ros_roslaunch-check_launch/fast
+vrpn_client_ros/fast:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/build.make vrpn_client_ros/CMakeFiles/vrpn_client_ros.dir/build
+.PHONY : vrpn_client_ros/fast
 
 # Convenience name for target.
 vrpn_client_ros/CMakeFiles/_run_tests_vrpn_client_ros_roslint.dir/rule:
@@ -496,23 +481,22 @@ help:
 	@echo "... depend"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... test"
+	@echo "... _run_tests_vrpn_client_ros"
+	@echo "... rebuild_cache"
+	@echo "... run_tests_vrpn_client_ros_roslaunch-check_launch"
 	@echo "... run_tests_vrpn_client_ros"
 	@echo "... run_tests_vrpn_client_ros_roslint"
 	@echo "... edit_cache"
 	@echo "... roslint_vrpn_client_ros"
-	@echo "... roslint"
-	@echo "... vrpn_client_ros"
 	@echo "... vrpn_client_node"
-	@echo "... _run_tests_vrpn_client_ros"
-	@echo "... rebuild_cache"
-	@echo "... run_tests_vrpn_client_ros_roslaunch-check_launch"
+	@echo "... vrpn_client_ros"
 	@echo "... _run_tests_vrpn_client_ros_roslint"
 	@echo "... run_tests_vrpn_client_ros_roslint_package"
 	@echo "... list_install_components"
 	@echo "... _run_tests_vrpn_client_ros_roslint_package"
 	@echo "... vrpn_tracker_node"
 	@echo "... run_tests_vrpn_client_ros_roslaunch-check"
+	@echo "... test"
 	@echo "... clean_test_results_vrpn_client_ros"
 	@echo "... install/strip"
 	@echo "... _run_tests_vrpn_client_ros_roslaunch-check"

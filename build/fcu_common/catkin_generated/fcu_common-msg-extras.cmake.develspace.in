@@ -1,0 +1,2 @@
+set(fcu_common_MESSAGE_FILES "/home/odroid/catkin_ws/src/fcu_common/msg/GPS.msg;/home/odroid/catkin_ws/src/fcu_common/msg/OutputRaw.msg;/home/odroid/catkin_ws/src/fcu_common/msg/RCRaw.msg;/home/odroid/catkin_ws/src/fcu_common/msg/Command.msg;/home/odroid/catkin_ws/src/fcu_common/msg/Barometer.msg;/home/odroid/catkin_ws/src/fcu_common/msg/Airspeed.msg;/home/odroid/catkin_ws/src/fcu_common/msg/Attitude.msg;/home/odroid/catkin_ws/src/fcu_common/msg/State.msg;/home/odroid/catkin_ws/src/fcu_common/msg/Status.msg")
+set(fcu_common_SERVICE_FILES "")
