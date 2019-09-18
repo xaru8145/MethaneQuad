@@ -79,7 +79,7 @@ rosflightIO::rosflightIO()
   }
   else
   {
-    std::string port = nh_private.param<std::string>("port", "/dev/ttyUSB0");
+    std::string port = nh_private.param<std::string>("port", "/dev/naze");
     int baud_rate = nh_private.param<int>("baud_rate", 921600);
 
     ROS_INFO("Connecting to serial port \"%s\", at %d baud", port.c_str(), baud_rate);
@@ -115,7 +115,7 @@ rosflightIO::rosflightIO()
   unsaved_params_pub_.publish(unsaved_msg);
 
   // Set up a few other random things
-  frame_id_ = nh_private.param<std::string>("frame_id", "world");
+  frame_id_ = nh_private.param<std::string>("frame_id", "imu_link");
 
   prev_status_.armed = false;
   prev_status_.failsafe = false;

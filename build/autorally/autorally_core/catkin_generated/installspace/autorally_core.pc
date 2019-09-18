@@ -1,0 +1,8 @@
+prefix=/home/odroid/catkin_ws/install
+
+Name: autorally_core
+Description: Description of autorally_core
+Version: 0.2.5
+Cflags: -I/home/odroid/catkin_ws/install/include
+Libs: -L/home/odroid/catkin_ws/install/lib -lSerialSensorInterface -lDiagnostics -lRingBuffer
+Requires: roscpp rospy std_msgs geometry_msgs sensor_msgs nav_msgs image_transport autorally_msgs

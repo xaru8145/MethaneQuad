@@ -1,0 +1,8 @@
+prefix=/home/odroid/catkin_ws/devel
+
+Name: autorally_control
+Description: Description of autorally_control
+Version: 0.2.5
+Cflags: -I/home/odroid/catkin_ws/devel/include -I/home/odroid/catkin_ws/src/autorally/autorally_control/include -I/usr/include
+Libs: -L/home/odroid/catkin_ws/devel/lib -lautorally_plant -lparam_getter
+Requires: roscpp std_msgs geometry_msgs nav_msgs nodelet dynamic_reconfigure autorally_core autorally_msgs

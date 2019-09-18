@@ -1,0 +1,8 @@
+prefix=/home/odroid/catkin_ws/install
+
+Name: autorally_util
+Description: Description of autorally_util
+Version: 0.2.5
+Cflags: 
+Libs: -L/home/odroid/catkin_ws/install/lib 
+Requires: 

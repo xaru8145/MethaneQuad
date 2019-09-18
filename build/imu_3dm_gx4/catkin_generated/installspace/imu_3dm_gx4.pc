@@ -1,0 +1,8 @@
+prefix=/home/odroid/catkin_ws/install
+
+Name: imu_3dm_gx4
+Description: Description of imu_3dm_gx4
+Version: 0.0.5
+Cflags: -I/home/odroid/catkin_ws/install/include
+Libs: -L/home/odroid/catkin_ws/install/lib 
+Requires: message_runtime geometry_msgs sensor_msgs

@@ -1,0 +1,16 @@
+\subsubsection usage Usage
+\verbatim
+<node name="PathIntegral" pkg="autorally_control" type="PathIntegral">
+  <param name="max_throttle" type="double" value="0.65" />
+  <param name="desired_speed" type="double" value="6.0" />
+  <param name="speed_coefficient" type="double" value="4.25" />
+  <param name="track_coefficient" type="double" value="200.0" />
+  <param name="max_slip_angle" type="double" value="1.25" />
+  <param name="slip_penalty" type="double" value="10.0" />
+  <param name="crash_coefficient" type="double" value="10000.0" />
+  <param name="track_slop" type="double" value="0.0" />
+  <param name="steering_coeff" type="double" value="0.0" />
+  <param name="throttle_coeff" type="double" value="0.0" />
+</node>
+\endverbatim
+

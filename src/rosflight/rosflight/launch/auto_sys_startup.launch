@@ -8,11 +8,10 @@
 
 <node pkg="timed_roslaunch" type="timed_roslaunch.sh" args="2 rosflight param_startup.launch" name="timed_roslaunch" output="screen" />
 
-<include file="/home/odroid/catkin_ws/src/vrpn_client_ros/launch/vicon.launch" />
+<!-- include file="/home/odroid/catkin_ws/src/vrpn_client_ros/launch/vicon.launch" /> -->
 <!--   <include if="$(arg optitrack)" file="/home/odroid/catkin_ws/src/vrpn_client_ros/launch/optitrack.launch" /> -->
 
-<node pkg="rosflight" type="vrpn2odom" name="vrpn2odom" output="screen" > 
-</node>
+<!-- node pkg="rosflight" type="vrpn2odom" name="vrpn2odom" output="screen"> --> 
 
 <include file="/home/odroid/catkin_ws/src/roscopter/roscopter/launch/load_params.launch" />
 

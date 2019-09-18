@@ -92,28 +92,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -125,6 +103,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -134,6 +123,17 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,66 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule
-
-# Convenience name for target.
-multirotor_forces_and_moments_plugin: roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule
-
-.PHONY : multirotor_forces_and_moments_plugin
-
-# fast build rule for target.
-multirotor_forces_and_moments_plugin/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/build.make roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/build
-.PHONY : multirotor_forces_and_moments_plugin/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_py.dir/rule
-
-.PHONY : bond_generate_messages_py
-
-# fast build rule for target.
-bond_generate_messages_py/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_py.dir/build.make roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_py.dir/build
-.PHONY : bond_generate_messages_py/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_eus.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_eus.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_eus: roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_eus.dir/rule
-
-.PHONY : bond_generate_messages_eus
-
-# fast build rule for target.
-bond_generate_messages_eus/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_eus.dir/build.make roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_eus.dir/build
-.PHONY : bond_generate_messages_eus/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_py: roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_py.dir/build.make roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
-
-# Convenience name for target.
 roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
 .PHONY : roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_nodejs.dir/rule
@@ -258,21 +198,6 @@ gazebo_msgs_generate_messages_lisp/fast:
 .PHONY : gazebo_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_nodejs: roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
-
-.PHONY : nodelet_generate_messages_nodejs
-
-# fast build rule for target.
-nodelet_generate_messages_nodejs/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
-.PHONY : nodelet_generate_messages_nodejs/fast
-
-# Convenience name for target.
 roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
 .PHONY : roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_py.dir/rule
@@ -301,6 +226,36 @@ gazebo_msgs_generate_messages_eus: roscopter/roscopter_sim/CMakeFiles/gazebo_msg
 gazebo_msgs_generate_messages_eus/fast:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build.make roscopter/roscopter_sim/CMakeFiles/gazebo_msgs_generate_messages_eus.dir/build
 .PHONY : gazebo_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+.PHONY : roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+trajectory_msgs_generate_messages_cpp: roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : trajectory_msgs_generate_messages_cpp
+
+# fast build rule for target.
+trajectory_msgs_generate_messages_cpp/fast:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
+.PHONY : trajectory_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule
+.PHONY : roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+# Convenience name for target.
+gazebo_ros_gencfg: roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule
+
+.PHONY : gazebo_ros_gencfg
+
+# fast build rule for target.
+gazebo_ros_gencfg/fast:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/build.make roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/build
+.PHONY : gazebo_ros_gencfg/fast
 
 # Convenience name for target.
 roscopter/roscopter_sim/CMakeFiles/gazebo_plugins_gencfg.dir/rule:
@@ -348,21 +303,6 @@ trajectory_msgs_generate_messages_lisp/fast:
 .PHONY : trajectory_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_nodejs: roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_nodejs.dir/rule
-
-.PHONY : bond_generate_messages_nodejs
-
-# fast build rule for target.
-bond_generate_messages_nodejs/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_nodejs.dir/build.make roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_nodejs.dir/build
-.PHONY : bond_generate_messages_nodejs/fast
-
-# Convenience name for target.
 roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
 .PHONY : roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/rule
@@ -376,21 +316,6 @@ trajectory_msgs_generate_messages_nodejs: roscopter/roscopter_sim/CMakeFiles/tra
 trajectory_msgs_generate_messages_nodejs/fast:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build.make roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_nodejs.dir/build
 .PHONY : trajectory_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_cpp.dir/build.make roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
 
 # Convenience name for target.
 roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_eus.dir/rule:
@@ -423,94 +348,19 @@ trajectory_msgs_generate_messages_py/fast:
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_lisp.dir/rule
+roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule
+.PHONY : roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule
 
 # Convenience name for target.
-bond_generate_messages_lisp: roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_lisp.dir/rule
+multirotor_forces_and_moments_plugin: roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/rule
 
-.PHONY : bond_generate_messages_lisp
+.PHONY : multirotor_forces_and_moments_plugin
 
 # fast build rule for target.
-bond_generate_messages_lisp/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_lisp.dir/build.make roscopter/roscopter_sim/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_cpp: roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-.PHONY : nodelet_generate_messages_cpp
-
-# fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_eus: roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_eus.dir/rule
-
-.PHONY : nodelet_generate_messages_eus
-
-# fast build rule for target.
-nodelet_generate_messages_eus/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_eus.dir/build.make roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_eus.dir/build
-.PHONY : nodelet_generate_messages_eus/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-trajectory_msgs_generate_messages_cpp: roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : trajectory_msgs_generate_messages_cpp
-
-# fast build rule for target.
-trajectory_msgs_generate_messages_cpp/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build.make roscopter/roscopter_sim/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/build
-.PHONY : trajectory_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule
-
-# Convenience name for target.
-gazebo_ros_gencfg: roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/rule
-
-.PHONY : gazebo_ros_gencfg
-
-# fast build rule for target.
-gazebo_ros_gencfg/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/build.make roscopter/roscopter_sim/CMakeFiles/gazebo_ros_gencfg.dir/build
-.PHONY : gazebo_ros_gencfg/fast
-
-# Convenience name for target.
-roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make roscopter/roscopter_sim/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
+multirotor_forces_and_moments_plugin/fast:
+	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/build.make roscopter/roscopter_sim/CMakeFiles/multirotor_forces_and_moments_plugin.dir/build
+.PHONY : multirotor_forces_and_moments_plugin/fast
 
 src/multirotor_forces_and_moments.o: src/multirotor_forces_and_moments.cpp.o
 
@@ -548,33 +398,23 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... multirotor_forces_and_moments_plugin"
-	@echo "... bond_generate_messages_py"
-	@echo "... bond_generate_messages_eus"
-	@echo "... nodelet_generate_messages_py"
 	@echo "... gazebo_msgs_generate_messages_nodejs"
-	@echo "... gazebo_msgs_generate_messages_lisp"
-	@echo "... nodelet_generate_messages_nodejs"
-	@echo "... gazebo_msgs_generate_messages_py"
-	@echo "... gazebo_msgs_generate_messages_eus"
-	@echo "... gazebo_plugins_gencfg"
-	@echo "... gazebo_msgs_generate_messages_cpp"
-	@echo "... trajectory_msgs_generate_messages_lisp"
-	@echo "... bond_generate_messages_nodejs"
-	@echo "... trajectory_msgs_generate_messages_nodejs"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... trajectory_msgs_generate_messages_eus"
-	@echo "... trajectory_msgs_generate_messages_py"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... nodelet_generate_messages_cpp"
 	@echo "... rebuild_cache"
-	@echo "... nodelet_generate_messages_eus"
+	@echo "... gazebo_msgs_generate_messages_lisp"
+	@echo "... gazebo_msgs_generate_messages_py"
+	@echo "... edit_cache"
+	@echo "... gazebo_msgs_generate_messages_eus"
 	@echo "... list_install_components"
 	@echo "... trajectory_msgs_generate_messages_cpp"
 	@echo "... gazebo_ros_gencfg"
-	@echo "... nodelet_generate_messages_lisp"
+	@echo "... gazebo_plugins_gencfg"
+	@echo "... gazebo_msgs_generate_messages_cpp"
+	@echo "... trajectory_msgs_generate_messages_lisp"
+	@echo "... trajectory_msgs_generate_messages_nodejs"
+	@echo "... trajectory_msgs_generate_messages_eus"
+	@echo "... trajectory_msgs_generate_messages_py"
+	@echo "... multirotor_forces_and_moments_plugin"
+	@echo "... test"
 	@echo "... src/multirotor_forces_and_moments.o"
 	@echo "... src/multirotor_forces_and_moments.i"
 	@echo "... src/multirotor_forces_and_moments.s"

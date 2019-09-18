@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-roscopter/roscopter/CMakeFiles/ekf_node.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter/CMakeFiles/ekf_node.dir/rule
-.PHONY : roscopter/roscopter/CMakeFiles/ekf_node.dir/rule
-
-# Convenience name for target.
-ekf_node: roscopter/roscopter/CMakeFiles/ekf_node.dir/rule
-
-.PHONY : ekf_node
-
-# fast build rule for target.
-ekf_node/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_node.dir/build.make roscopter/roscopter/CMakeFiles/ekf_node.dir/build
-.PHONY : ekf_node/fast
-
-# Convenience name for target.
 roscopter/roscopter/CMakeFiles/roscopter_gencfg.dir/rule:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter/CMakeFiles/roscopter_gencfg.dir/rule
 .PHONY : roscopter/roscopter/CMakeFiles/roscopter_gencfg.dir/rule
@@ -438,21 +423,6 @@ dynamic_reconfigure_generate_messages_eus/fast:
 .PHONY : dynamic_reconfigure_generate_messages_eus/fast
 
 # Convenience name for target.
-roscopter/roscopter/CMakeFiles/ekf.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter/CMakeFiles/ekf.dir/rule
-.PHONY : roscopter/roscopter/CMakeFiles/ekf.dir/rule
-
-# Convenience name for target.
-ekf: roscopter/roscopter/CMakeFiles/ekf.dir/rule
-
-.PHONY : ekf
-
-# fast build rule for target.
-ekf/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/build
-.PHONY : ekf/fast
-
-# Convenience name for target.
 roscopter/roscopter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
 .PHONY : roscopter/roscopter/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule
@@ -511,36 +481,6 @@ actionlib_msgs_generate_messages_lisp: roscopter/roscopter/CMakeFiles/actionlib_
 actionlib_msgs_generate_messages_lisp/fast:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build.make roscopter/roscopter/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/build
 .PHONY : actionlib_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/rule
-.PHONY : roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/rule
-
-# Convenience name for target.
-ekf_rosbag: roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/rule
-
-.PHONY : ekf_rosbag
-
-# fast build rule for target.
-ekf_rosbag/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/build.make roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/build
-.PHONY : ekf_rosbag/fast
-
-# Convenience name for target.
-roscopter/roscopter/CMakeFiles/ekf_ros.dir/rule:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 roscopter/roscopter/CMakeFiles/ekf_ros.dir/rule
-.PHONY : roscopter/roscopter/CMakeFiles/ekf_ros.dir/rule
-
-# Convenience name for target.
-ekf_ros: roscopter/roscopter/CMakeFiles/ekf_ros.dir/rule
-
-.PHONY : ekf_ros
-
-# fast build rule for target.
-ekf_ros/fast:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_ros.dir/build.make roscopter/roscopter/CMakeFiles/ekf_ros.dir/build
-.PHONY : ekf_ros/fast
 
 # Convenience name for target.
 roscopter/roscopter/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/rule:
@@ -653,222 +593,6 @@ src/controller/simple_pid.cpp.s:
 	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/controller.dir/build.make roscopter/roscopter/CMakeFiles/controller.dir/src/controller/simple_pid.cpp.s
 .PHONY : src/controller/simple_pid.cpp.s
 
-src/ekf/ekf.o: src/ekf/ekf.cpp.o
-
-.PHONY : src/ekf/ekf.o
-
-# target to build an object file
-src/ekf/ekf.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf.cpp.o
-.PHONY : src/ekf/ekf.cpp.o
-
-src/ekf/ekf.i: src/ekf/ekf.cpp.i
-
-.PHONY : src/ekf/ekf.i
-
-# target to preprocess a source file
-src/ekf/ekf.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf.cpp.i
-.PHONY : src/ekf/ekf.cpp.i
-
-src/ekf/ekf.s: src/ekf/ekf.cpp.s
-
-.PHONY : src/ekf/ekf.s
-
-# target to generate assembly for a file
-src/ekf/ekf.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf.cpp.s
-.PHONY : src/ekf/ekf.cpp.s
-
-src/ekf/ekf_dyn.o: src/ekf/ekf_dyn.cpp.o
-
-.PHONY : src/ekf/ekf_dyn.o
-
-# target to build an object file
-src/ekf/ekf_dyn.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_dyn.cpp.o
-.PHONY : src/ekf/ekf_dyn.cpp.o
-
-src/ekf/ekf_dyn.i: src/ekf/ekf_dyn.cpp.i
-
-.PHONY : src/ekf/ekf_dyn.i
-
-# target to preprocess a source file
-src/ekf/ekf_dyn.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_dyn.cpp.i
-.PHONY : src/ekf/ekf_dyn.cpp.i
-
-src/ekf/ekf_dyn.s: src/ekf/ekf_dyn.cpp.s
-
-.PHONY : src/ekf/ekf_dyn.s
-
-# target to generate assembly for a file
-src/ekf/ekf_dyn.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_dyn.cpp.s
-.PHONY : src/ekf/ekf_dyn.cpp.s
-
-src/ekf/ekf_helper.o: src/ekf/ekf_helper.cpp.o
-
-.PHONY : src/ekf/ekf_helper.o
-
-# target to build an object file
-src/ekf/ekf_helper.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_helper.cpp.o
-.PHONY : src/ekf/ekf_helper.cpp.o
-
-src/ekf/ekf_helper.i: src/ekf/ekf_helper.cpp.i
-
-.PHONY : src/ekf/ekf_helper.i
-
-# target to preprocess a source file
-src/ekf/ekf_helper.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_helper.cpp.i
-.PHONY : src/ekf/ekf_helper.cpp.i
-
-src/ekf/ekf_helper.s: src/ekf/ekf_helper.cpp.s
-
-.PHONY : src/ekf/ekf_helper.s
-
-# target to generate assembly for a file
-src/ekf/ekf_helper.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_helper.cpp.s
-.PHONY : src/ekf/ekf_helper.cpp.s
-
-src/ekf/ekf_log.o: src/ekf/ekf_log.cpp.o
-
-.PHONY : src/ekf/ekf_log.o
-
-# target to build an object file
-src/ekf/ekf_log.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_log.cpp.o
-.PHONY : src/ekf/ekf_log.cpp.o
-
-src/ekf/ekf_log.i: src/ekf/ekf_log.cpp.i
-
-.PHONY : src/ekf/ekf_log.i
-
-# target to preprocess a source file
-src/ekf/ekf_log.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_log.cpp.i
-.PHONY : src/ekf/ekf_log.cpp.i
-
-src/ekf/ekf_log.s: src/ekf/ekf_log.cpp.s
-
-.PHONY : src/ekf/ekf_log.s
-
-# target to generate assembly for a file
-src/ekf/ekf_log.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_log.cpp.s
-.PHONY : src/ekf/ekf_log.cpp.s
-
-src/ekf/ekf_meas.o: src/ekf/ekf_meas.cpp.o
-
-.PHONY : src/ekf/ekf_meas.o
-
-# target to build an object file
-src/ekf/ekf_meas.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_meas.cpp.o
-.PHONY : src/ekf/ekf_meas.cpp.o
-
-src/ekf/ekf_meas.i: src/ekf/ekf_meas.cpp.i
-
-.PHONY : src/ekf/ekf_meas.i
-
-# target to preprocess a source file
-src/ekf/ekf_meas.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_meas.cpp.i
-.PHONY : src/ekf/ekf_meas.cpp.i
-
-src/ekf/ekf_meas.s: src/ekf/ekf_meas.cpp.s
-
-.PHONY : src/ekf/ekf_meas.s
-
-# target to generate assembly for a file
-src/ekf/ekf_meas.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf.dir/build.make roscopter/roscopter/CMakeFiles/ekf.dir/src/ekf/ekf_meas.cpp.s
-.PHONY : src/ekf/ekf_meas.cpp.s
-
-src/ekf/ekf_node.o: src/ekf/ekf_node.cpp.o
-
-.PHONY : src/ekf/ekf_node.o
-
-# target to build an object file
-src/ekf/ekf_node.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_node.dir/build.make roscopter/roscopter/CMakeFiles/ekf_node.dir/src/ekf/ekf_node.cpp.o
-.PHONY : src/ekf/ekf_node.cpp.o
-
-src/ekf/ekf_node.i: src/ekf/ekf_node.cpp.i
-
-.PHONY : src/ekf/ekf_node.i
-
-# target to preprocess a source file
-src/ekf/ekf_node.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_node.dir/build.make roscopter/roscopter/CMakeFiles/ekf_node.dir/src/ekf/ekf_node.cpp.i
-.PHONY : src/ekf/ekf_node.cpp.i
-
-src/ekf/ekf_node.s: src/ekf/ekf_node.cpp.s
-
-.PHONY : src/ekf/ekf_node.s
-
-# target to generate assembly for a file
-src/ekf/ekf_node.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_node.dir/build.make roscopter/roscopter/CMakeFiles/ekf_node.dir/src/ekf/ekf_node.cpp.s
-.PHONY : src/ekf/ekf_node.cpp.s
-
-src/ekf/ekf_ros.o: src/ekf/ekf_ros.cpp.o
-
-.PHONY : src/ekf/ekf_ros.o
-
-# target to build an object file
-src/ekf/ekf_ros.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_ros.dir/build.make roscopter/roscopter/CMakeFiles/ekf_ros.dir/src/ekf/ekf_ros.cpp.o
-.PHONY : src/ekf/ekf_ros.cpp.o
-
-src/ekf/ekf_ros.i: src/ekf/ekf_ros.cpp.i
-
-.PHONY : src/ekf/ekf_ros.i
-
-# target to preprocess a source file
-src/ekf/ekf_ros.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_ros.dir/build.make roscopter/roscopter/CMakeFiles/ekf_ros.dir/src/ekf/ekf_ros.cpp.i
-.PHONY : src/ekf/ekf_ros.cpp.i
-
-src/ekf/ekf_ros.s: src/ekf/ekf_ros.cpp.s
-
-.PHONY : src/ekf/ekf_ros.s
-
-# target to generate assembly for a file
-src/ekf/ekf_ros.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_ros.dir/build.make roscopter/roscopter/CMakeFiles/ekf_ros.dir/src/ekf/ekf_ros.cpp.s
-.PHONY : src/ekf/ekf_ros.cpp.s
-
-src/ekf/ekf_rosbag.o: src/ekf/ekf_rosbag.cpp.o
-
-.PHONY : src/ekf/ekf_rosbag.o
-
-# target to build an object file
-src/ekf/ekf_rosbag.cpp.o:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/build.make roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/src/ekf/ekf_rosbag.cpp.o
-.PHONY : src/ekf/ekf_rosbag.cpp.o
-
-src/ekf/ekf_rosbag.i: src/ekf/ekf_rosbag.cpp.i
-
-.PHONY : src/ekf/ekf_rosbag.i
-
-# target to preprocess a source file
-src/ekf/ekf_rosbag.cpp.i:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/build.make roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/src/ekf/ekf_rosbag.cpp.i
-.PHONY : src/ekf/ekf_rosbag.cpp.i
-
-src/ekf/ekf_rosbag.s: src/ekf/ekf_rosbag.cpp.s
-
-.PHONY : src/ekf/ekf_rosbag.s
-
-# target to generate assembly for a file
-src/ekf/ekf_rosbag.cpp.s:
-	cd /home/odroid/catkin_ws/build && $(MAKE) -f roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/build.make roscopter/roscopter/CMakeFiles/ekf_rosbag.dir/src/ekf/ekf_rosbag.cpp.s
-.PHONY : src/ekf/ekf_rosbag.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -878,7 +602,6 @@ help:
 	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... list_install_components"
-	@echo "... ekf_node"
 	@echo "... edit_cache"
 	@echo "... roscopter_gencfg"
 	@echo "... topic_tools_generate_messages_nodejs"
@@ -899,13 +622,10 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... ekf"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
-	@echo "... ekf_rosbag"
-	@echo "... ekf_ros"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... test"
 	@echo "... nav_msgs_generate_messages_nodejs"
@@ -918,30 +638,6 @@ help:
 	@echo "... src/controller/simple_pid.o"
 	@echo "... src/controller/simple_pid.i"
 	@echo "... src/controller/simple_pid.s"
-	@echo "... src/ekf/ekf.o"
-	@echo "... src/ekf/ekf.i"
-	@echo "... src/ekf/ekf.s"
-	@echo "... src/ekf/ekf_dyn.o"
-	@echo "... src/ekf/ekf_dyn.i"
-	@echo "... src/ekf/ekf_dyn.s"
-	@echo "... src/ekf/ekf_helper.o"
-	@echo "... src/ekf/ekf_helper.i"
-	@echo "... src/ekf/ekf_helper.s"
-	@echo "... src/ekf/ekf_log.o"
-	@echo "... src/ekf/ekf_log.i"
-	@echo "... src/ekf/ekf_log.s"
-	@echo "... src/ekf/ekf_meas.o"
-	@echo "... src/ekf/ekf_meas.i"
-	@echo "... src/ekf/ekf_meas.s"
-	@echo "... src/ekf/ekf_node.o"
-	@echo "... src/ekf/ekf_node.i"
-	@echo "... src/ekf/ekf_node.s"
-	@echo "... src/ekf/ekf_ros.o"
-	@echo "... src/ekf/ekf_ros.i"
-	@echo "... src/ekf/ekf_ros.s"
-	@echo "... src/ekf/ekf_rosbag.o"
-	@echo "... src/ekf/ekf_rosbag.i"
-	@echo "... src/ekf/ekf_rosbag.s"
 .PHONY : help
 
 

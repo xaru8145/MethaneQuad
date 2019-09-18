@@ -1,0 +1,15 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~max_throttle" : \b [double] Maximum applied throttle min: 0.0, default: 0.65, max: 1.0
+- \b "~desired_speed" : \b [double] Speed Target for the MPPI controller min: 0.0, default: 6.0, max: 25.0
+- \b "~speed_coefficient" : \b [double] Weight for acheiving target velocity min: 0.0, default: 4.25, max: 20.0
+- \b "~track_coefficient" : \b [double] Weight for staying on the track min: 0.0, default: 200.0, max: 500.0
+- \b "~max_slip_angle" : \b [double] Maximum slip angle allowed min: 0.0, default: 1.25, max: 3.14
+- \b "~slip_penalty" : \b [double] Penalty for violating slip angle threshold min: 0.0, default: 10.0, max: 1000.0
+- \b "~crash_coefficient" : \b [double] Penalty for crashing min: 0.0, default: 10000.0, max: 20000.0
+- \b "~track_slop" : \b [double] Value for clipping track cost to zero. min: 0.0, default: 0.0, max: 0.75
+- \b "~steering_coeff" : \b [double] Steering Cost Coefficient min: 0.0, default: 0.0, max: 1.0
+- \b "~throttle_coeff" : \b [double] Throttle Cost Coefficient min: 0.0, default: 0.0, max: 1.0
+

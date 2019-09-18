@@ -1,0 +1,8 @@
+prefix=/home/odroid/catkin_ws/devel
+
+Name: autorally_gazebo
+Description: Description of autorally_gazebo
+Version: 0.2.5
+Cflags: 
+Libs: -L/home/odroid/catkin_ws/devel/lib 
+Requires: 
